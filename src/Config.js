@@ -2,7 +2,6 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyBJ4b8LR6x_kO0wxMdPb3Eu_Q1E-zTIjQI",
   authDomain: "sarapee-database.firebaseapp.com",
