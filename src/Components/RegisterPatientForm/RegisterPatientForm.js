@@ -104,31 +104,6 @@ function RegisterPatienForm() {
 
     //icf
     countIcf: 0,
-    // icfBodyInjury: "",
-    // icfBodyCognition: "",
-    // icfBodyFitness: "",
-    // icfBodyUpper: "",
-
-    // icfPartiQuality: "",
-    // icfPartiCommunity: "",
-    // icfPartiSocial: "",
-    // icfPartiWorkEmployment: "",
-
-    // icfActMobility: "",
-    // icfActADL: "",
-    // icfActPhysical: "",
-
-    // icfEnvWheel: "",
-    // icfEnvHome: "",
-    // icfEnvTrans: "",
-
-    // icfPerAge: "",
-    // icfPerSkill: "",
-    // icfPerBMI: "",
-    // icfPerGender: "",
-    // icfPerEth: "",
-    // icfPerDuration: "",
-    // icfPerMar: "",
 
     // BI
     biScore: "",
