@@ -19,6 +19,8 @@ function RegisterPatientForm2() {
 
   const updateRef = doc(db, "users", userId);
 
+  //DB
+  const [treatmentHistoryDb, setTreatmentHistoryDb] = useState("");
   const [rigthToTreatmentDb, setRigthToTreatmentDb] = useState("ไม่มี"); //สิทธิการรักษา
   const [drugAllergyDb, setDrugAllergyDb] = useState(""); //แพ้ยา
   const [congenitalDiseaseDb, setCongenitalDiseaseDb] = useState(""); //โรคประจำตัว
@@ -42,6 +44,7 @@ function RegisterPatientForm2() {
       valueCheckbox7;
 
     await updateDoc(updateRef, {
+      treatmentHistory: treatmentHistoryDb,
       rigthToTreatment: rigthToTreatmentDb,
       drugAllergy: drugAllergyDb,
       congenitalDisease: congenitalDiseaseDb,
@@ -149,6 +152,9 @@ function RegisterPatientForm2() {
               <FloatingLabel
                 controlId="floatingInputGrid"
                 label="ประวัติการรักษา"
+                onChange={(e) => {
+                  setTreatmentHistoryDb(e.target.value);
+                }}
               >
                 <Form.Control
                   type="text"
@@ -314,7 +320,7 @@ function RegisterPatientForm2() {
                   <Col>
                     <FloatingLabel
                       controlId="floatingSelect"
-                      label="อุปกรณ์ติดตัวกลับบ้าน"
+                      label="อุปกรณ์อื่น ๆ"
                       onChange={(e) => {
                         setTakeHomeEquDb(e.target.value);
                       }}

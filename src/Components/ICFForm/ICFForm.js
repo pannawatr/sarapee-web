@@ -43,7 +43,9 @@ function ICFForm() {
   const [icfEnvHomeDb, setIcfEnvHomeDb] = useState("");
   const [icfEnvTransDb, setIcfEnvTransDb] = useState("");
 
-  const [icfPerAgeDb, setIcfPerAgeDb] = useState("");
+  const [icfImpairmentDb, setIcfImpairmentDb] = useState("การเคลื่อนไหว");
+
+  const [icfPerStatusDb, setIcfPerStatusDb] = useState("");
   const [icfPerSkillDb, setIcfPerSkillDb] = useState("");
   const [icfPerBMIDb, setIcfPerBMIDb] = useState("");
   const [icfPerGenderDb, setIcfPerGenderDb] = useState("");
@@ -74,7 +76,9 @@ function ICFForm() {
       icfEnvHome: icfEnvHomeDb,
       icfEnvTrans: icfEnvTransDb,
 
-      icfPerAge: icfPerAgeDb,
+      icfImpairment: icfImpairmentDb,
+
+      icfPerStatus: icfPerStatusDb,
       icfPerSkill: icfPerSkillDb,
       icfPerBMI: icfPerBMIDb,
       icfPerGender: icfPerGenderDb,
@@ -115,7 +119,7 @@ function ICFForm() {
             <Card style={{ borderRadius: "15px" }}>
               <Card.Body>
                 <h4 className="text-center p-2">
-                  Body functions and stractures
+                  Body functions and structures
                 </h4>
                 <FloatingLabel
                   controlId="floatingInputGrid"
@@ -342,13 +346,35 @@ function ICFForm() {
           <Col lg={12}>
             <Card style={{ borderRadius: "15px" }}>
               <Card.Body>
+                <FloatingLabel controlId="floatingSelect" label="Impairment">
+                  <Form.Select
+                    style={{ borderRadius: "15px" }}
+                    onChange={(e) => {
+                      setIcfImpairmentDb(e.target.value);
+                    }}
+                  >
+                    <option value="การเคลื่อนไหว">การเคลื่อนไหว</option>
+                    <option value="การกลื่น">การกลื่น</option>
+                    <option value="การพูด">การพูด</option>
+                    <option value="ความคิดความจำ">ความคิดตวามจำ</option>
+                  </Form.Select>
+                </FloatingLabel>
+              </Card.Body>
+            </Card>
+            <br></br>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={12}>
+            <Card style={{ borderRadius: "15px" }}>
+              <Card.Body>
                 <h4 className="text-center p-2">Personal Factors</h4>
-                <FloatingLabel controlId="floatingInputGrid" label="Age">
+                <FloatingLabel controlId="floatingInputGrid" label="Status">
                   <Form.Control
                     type="text"
                     placeholder=" "
                     onChange={(e) => {
-                      setIcfPerAgeDb(e.target.value);
+                      setIcfPerStatusDb(e.target.value);
                     }}
                     style={{ borderRadius: "15px" }}
                     required

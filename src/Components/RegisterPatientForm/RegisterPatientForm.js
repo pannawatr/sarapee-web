@@ -45,17 +45,17 @@ function RegisterPatienForm() {
   function onImageChange(e) {
     setImages([...e.target.files]);
   }
-  // DB
-  // const usersCollectionRef = collection(db, "users");
 
   // Data Db
   const [hnDb, setHnDb] = useState("");
   const [datePatientCardDb, setDatePatientCardDb] = useState("");
+  const [lifeStatusDb, setLifeStatusDb] = useState("มีชีวิตอยู่");
   const [preFixNameDb, setPrefixNameDb] = useState("นาย");
-  const [idCardDb, setIdCardDb] = useState("");
-  const [birthDayDb, setBirthDayDb] = useState("");
+  const [sexDb, setSexDb] = useState("ชาย");
   const [fnameDb, setFnameDb] = useState("");
   const [lnameDb, setLnameDb] = useState("");
+  const [idCardDb, setIdCardDb] = useState("");
+  const [birthDayDb, setBirthDayDb] = useState("");
   const [ageDb, setAgeDb] = useState("");
   const [bloodTypeDb, setBloodTypeDb] = useState("O");
   const [statusDb, setStatusDb] = useState("โสด");
@@ -74,7 +74,9 @@ function RegisterPatienForm() {
     imageurl: imageURLs[0],
     hn: hnDb,
     datePatientCard: datePatientCardDb,
+    lifeStatus: lifeStatusDb,
     prefixName: preFixNameDb,
+    sex: sexDb,
     fname: fnameDb,
     lname: lnameDb,
     idCard: idCardDb,
@@ -107,6 +109,70 @@ function RegisterPatienForm() {
 
     // BI
     biScore: "",
+
+    //กายภาพบำบัด
+    imgTime: "",
+    imgDayrecieve: "",
+    imgTimeService: "",
+
+    imgIcd: "",
+    imgImportantSymptoms: "",
+    imgPI: "",
+    imgPH: "",
+    imgPrecaution: "",
+    imgSpecialInvestigation: "",
+    imgVitalBP: "",
+    imgVitalHR: "",
+    imgVitalPR: "",
+    imgVitalTemp: "",
+    imgVitalO2sat: "",
+
+    imgConsiouscation: "Alert",
+    imgComununication: "",
+    imgComununicationAbout: "",
+    imgGeneralApperance: "",
+
+    imgPalpation: "",
+
+    imgMuscleTone: "",
+    imgROM: "",
+    imgMNT: "",
+    imgHERt: "",
+    imgHELt: "",
+    imgLERt: "",
+    imgLELt: "",
+
+    imgUpwardDownward: "dependent",
+    imgSupine: "dependent",
+    imgSidelying: "dependent",
+    imgSittingtoStand: "dependent",
+
+    imgBalanceSitStatic: "normal",
+    imgBalanceSitDynamic: "normal",
+    imgBalanceStandStatic: "normal",
+    imgBalanceStandDynamic: "normal",
+
+    imgTranferBedtoWC: "",
+    imgTransferBedtoToilet: "",
+    imgWalking: "",
+    imgWalkingAbout: "",
+
+    imgIndoor: "",
+    imgOutDoor: "",
+
+    imgPTDiag: "",
+    imgPatientFamGoal: "",
+    imgTeamTreatGoal: "",
+    imgFunctionallimit: "",
+
+    imgPlanOfTreatment: "",
+
+    imgTreatment: "",
+    imgHomeprogram: "",
+    imgReassessment: "",
+    imgReassessmentPoint: "",
+    imgReassessmentPointAbout: "",
+    imgPhysicalTherapyName: "",
   };
 
   const [formError, setFormError] = useState({});
@@ -135,10 +201,10 @@ function RegisterPatienForm() {
   return (
     <Container className="d-grid p-3">
       <Form>
-        <h4>ข้อมูลเวชทะเบียนผู้พิการ</h4>
+        <h4>ข้อมูลทะเบียนผู้พิการ</h4>
         <br></br>
         <Row>
-          <Col lg={6}>
+          <Col lg={4}>
             <FloatingLabel controlId="floatingInputGrid" label="HN">
               <Form.Control
                 type="text"
@@ -151,7 +217,7 @@ function RegisterPatienForm() {
             </FloatingLabel>
             <br></br>
           </Col>
-          <Col lg={6}>
+          <Col lg={4}>
             <FloatingLabel
               controlId="floatingInputGrid"
               label="วันที่มีบัตรคนพิการ"
@@ -167,6 +233,21 @@ function RegisterPatienForm() {
             </FloatingLabel>
             <br></br>
           </Col>
+          <Col lg={4}>
+            <FloatingLabel controlId="floatingSelect" label="สถานะ">
+              <Form.Select
+                style={{ borderRadius: "15px" }}
+                onChange={(e) => {
+                  setLifeStatusDb(e.target.value);
+                }}
+              >
+                <option value="มีชีวิตอยู่">มีชีวิตอยู่</option>
+                <option value="เสียชีวิต">เสียชีวิต</option>
+                <option value="ย้ายถิ่นที่อยู่">ย้ายถิ่นที่อยู่</option>
+              </Form.Select>
+            </FloatingLabel>
+            <br></br>
+          </Col>
         </Row>
 
         <Row>
@@ -175,6 +256,14 @@ function RegisterPatienForm() {
               <Form.Select
                 style={{ borderRadius: "15px" }}
                 onChange={(e) => {
+                  if (e.target.value == "นาย") {
+                    setSexDb("ชาย");
+                  } else if (
+                    e.target.value == "นาง" ||
+                    e.target.value == "นางสาว"
+                  ) {
+                    setSexDb("หญิง");
+                  }
                   setPrefixNameDb(e.target.value);
                 }}
               >
@@ -292,7 +381,7 @@ function RegisterPatienForm() {
         </Row>
 
         <br></br>
-        <h4>ที่อยู่</h4>
+        <h4>ที่อยู่ปัจจุบัน</h4>
         <br></br>
 
         <Row>

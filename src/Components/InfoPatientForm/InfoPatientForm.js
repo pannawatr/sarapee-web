@@ -112,14 +112,19 @@ function InfoPatientForm() {
 
           <Row>
             <Col md={4}>
-              <FloatingLabel controlId="floatingInputGrid" label="เพศ">
-                <Form.Control
-                  type="text"
-                  placeholder=" "
-                  style={{ borderRadius: "15px" }}
-                  readOnly
-                />
-              </FloatingLabel>
+              {users.map((user) => {
+                return (
+                  <FloatingLabel controlId="floatingInputGrid" label="เพศ">
+                    <Form.Control
+                      type="text"
+                      placeholder=" "
+                      value={user.sex}
+                      style={{ borderRadius: "15px" }}
+                      readOnly
+                    />
+                  </FloatingLabel>
+                );
+              })}
               <br></br>
             </Col>
             <Col md={4}>

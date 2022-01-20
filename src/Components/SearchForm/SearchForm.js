@@ -101,53 +101,13 @@ function SearchForm() {
                     </td>
                     <td>{user.disability}</td>
                     <td>
-                      {user.biScore ? (
-                        user.biScore
-                      ) : (
-                        <Button
-                          className="w-100"
-                          variant="primary"
-                          style={{ borderRadius: "15px", padding: ".5rem" }}
-                        >
-                          <Link
-                            to={`/bi/${user.id}`}
-                            activeClassName="active"
-                            style={{ textDecoration: "none", color: "white" }}
-                          >
-                            เพิ่ม
-                          </Link>
-                        </Button>
-                      )}
+                      {user.biScore ? user.biScore : <p>ยังไม่ได้กรอกข้อมูล</p>}
                     </td>
                     <td>
-                      <Button
-                        className="w-100"
-                        variant="primary"
-                        style={{ borderRadius: "15px", padding: ".5rem" }}
-                      >
-                        <Link
-                          to={`/imagethrapy/${user.id}`}
-                          activeClassName="active"
-                          style={{ textDecoration: "none", color: "white" }}
-                        >
-                          เพิ่ม
-                        </Link>
-                      </Button>
+                      <p>ยังไม่ได้กรอกข้อมูล</p>
                     </td>
                     <td>
-                      <Button
-                        className="w-100"
-                        variant="primary"
-                        style={{ borderRadius: "15px", padding: ".5rem" }}
-                      >
-                        <Link
-                          to={`/occupationalthrapy/${user.id}`}
-                          activeClassName="active"
-                          style={{ textDecoration: "none", color: "white" }}
-                        >
-                          เพิ่ม
-                        </Link>
-                      </Button>
+                      <p>ยังไม่ได้กรอกข้อมูล</p>
                     </td>
                     <td>
                       {user.countIcf != 0
@@ -181,22 +141,79 @@ function SearchForm() {
                               ICF
                             </Link>
                           </Dropdown.Item>
+                          <Dropdown.Item>
+                            <Link
+                              to={`/bi/${user.id}`}
+                              activeClassName="active"
+                              style={{ textDecoration: "none", color: "black" }}
+                            >
+                              BI
+                            </Link>
+                          </Dropdown.Item>
                         </DropdownButton>
                       ) : (
-                        <Button
+                        <DropdownButton
+                          id="dropdown-item-button"
                           className="w-100"
                           variant="primary"
                           title="ดูข้อมูล"
                           style={{ borderRadius: "15px", padding: ".5rem" }}
                         >
-                          <Link
+                          <Dropdown.Item
+                            as={Link}
                             to={`/infopatient/${user.id}`}
-                            activeClassName="active"
-                            style={{ textDecoration: "none", color: "white" }}
                           >
-                            ดูข้อมูล
-                          </Link>
-                        </Button>
+                            <Link
+                              to={`/infopatient/${user.id}`}
+                              activeClassName="active"
+                              style={{ textDecoration: "none", color: "black" }}
+                            >
+                              ดูข้อมูล
+                            </Link>
+                          </Dropdown.Item>
+                          <Dropdown.Item as={Link} to={`/bi/${user.id}`}>
+                            <Link
+                              to={`/bi/${user.id}`}
+                              activeClassName="active"
+                              style={{ textDecoration: "none", color: "black" }}
+                            >
+                              BI
+                            </Link>
+                          </Dropdown.Item>
+                          <Dropdown.Item
+                            as={Link}
+                            to={`/imagethrapy/${user.id}`}
+                          >
+                            <Link
+                              to={`/imagethrapy/${user.id}`}
+                              activeClassName="active"
+                              style={{ textDecoration: "none", color: "black" }}
+                            >
+                              ประเมินกายภาพบำบัด
+                            </Link>
+                          </Dropdown.Item>
+                          <Dropdown.Item
+                            as={Link}
+                            to={`/occupationalthrapy/${user.id}`}
+                          >
+                            <Link
+                              to={`/occupationalthrapy/${user.id}`}
+                              activeClassName="active"
+                              style={{ textDecoration: "none", color: "black" }}
+                            >
+                              ประเมินกิจกรรมบำบัด
+                            </Link>
+                          </Dropdown.Item>
+                          <Dropdown.Item as={Link} to={`/Icfinfo/${user.id}`}>
+                            <Link
+                              to={`/Icfinfo/${user.id}`}
+                              activeClassName="active"
+                              style={{ textDecoration: "none", color: "black" }}
+                            >
+                              ICF
+                            </Link>
+                          </Dropdown.Item>
+                        </DropdownButton>
                       )}
                     </td>
                   </tr>
