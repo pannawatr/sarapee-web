@@ -14,7 +14,7 @@ import { auth, db } from "../../Config";
 import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-import { collection, doc, setDoc, addDoc, updateDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 
 import ImageBlank from "./img/Profile.png";
 
@@ -256,11 +256,11 @@ function RegisterPatienForm() {
               <Form.Select
                 style={{ borderRadius: "15px" }}
                 onChange={(e) => {
-                  if (e.target.value == "นาย") {
+                  if (e.target.value === "นาย") {
                     setSexDb("ชาย");
                   } else if (
-                    e.target.value == "นาง" ||
-                    e.target.value == "นางสาว"
+                    e.target.value === "นาง" ||
+                    e.target.value === "นางสาว"
                   ) {
                     setSexDb("หญิง");
                   }

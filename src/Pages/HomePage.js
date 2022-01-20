@@ -8,7 +8,6 @@ import { Col, Row, Container, Card } from "react-bootstrap";
 import {
   BarChart,
   Bar,
-  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -17,7 +16,6 @@ import {
   ResponsiveContainer,
   PieChart,
   Pie,
-  Sector,
   Radar,
   RadarChart,
   PolarGrid,

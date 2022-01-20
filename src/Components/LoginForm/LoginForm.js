@@ -4,19 +4,20 @@ import { Container, Form, FloatingLabel, Button, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 
 import { auth } from "../../Config";
-import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  // onAuthStateChanged
+} from "firebase/auth";
 
 function LoginForm() {
   let navigate = useNavigate();
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
-
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
-
+  // onAuthStateChanged(auth, (currentUser) => {
+  //   setUser(currentUser);
+  // });
 
   const login = async () => {
     try {

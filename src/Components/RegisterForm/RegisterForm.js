@@ -3,20 +3,20 @@ import { Container, Form, FloatingLabel, Button } from "react-bootstrap";
 
 import {
   createUserWithEmailAndPassword,
-  onAuthStateChanged,
+  // onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../../Config";
 import { useNavigate } from "react-router-dom";
 
 function RegisterForm() {
   let navigate = useNavigate();
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
 
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
+  // onAuthStateChanged(auth, (currentUser) => {
+  //   setUser(currentUser);
+  // });
 
   const register = async () => {
     try {

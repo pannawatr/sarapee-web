@@ -7,7 +7,6 @@ import {
   Form,
   FloatingLabel,
   Table,
-  Button,
   DropdownButton,
   Dropdown,
 } from "react-bootstrap";
@@ -15,21 +14,13 @@ import {
 import { Link } from "react-router-dom";
 
 import { db } from "../../Config";
-import {
-  collection,
-  doc,
-  getDocs,
-  query,
-  snapshotEqual,
-  updateDoc,
-  where,
-} from "firebase/firestore";
-import { connectAuthEmulator } from "firebase/auth";
+import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
+
+// import { connectAuthEmulator } from "firebase/auth";
+
 function SearchForm() {
   // DB
   const [users, setUsers] = useState([]);
-  const [usersIcf, setUsersIcf] = useState([]);
-  const [searchItem, setSearchItem] = useState("");
 
   const colRef = collection(db, "users");
 
@@ -87,7 +78,7 @@ function SearchForm() {
               {users.map((user) => {
                 const updateRef = doc(db, "users", user.id);
                 const subcollection = collection(updateRef, "icf");
-                const gd = getDocs(subcollection).then((snap) => {
+                getDocs(subcollection).then((snap) => {
                   updateDoc(updateRef, {
                     countIcf: snap.size,
                   });
@@ -110,12 +101,12 @@ function SearchForm() {
                       <p>ยังไม่ได้กรอกข้อมูล</p>
                     </td>
                     <td>
-                      {user.countIcf != 0
+                      {user.countIcf !== 0
                         ? "กรอกข้อมูลแล้ว"
                         : "ยังไม่ได้กรอกข้อมูล"}
                     </td>
                     <td>
-                      {user.countIcf != 0 ? (
+                      {user.countIcf !== 0 ? (
                         <DropdownButton
                           id="dropdown-item-button"
                           className="w-100"
