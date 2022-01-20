@@ -258,7 +258,7 @@ function HomePage() {
           <Col lg={6}>
             <Card>
               <h4 className="text-center p-3">
-                จำนวนคนพิการทั้งหมดในอำเภแสารภี
+                จำนวนคนพิการทั้งหมดในอำเภอสารภี
               </h4>
               {/* PieChart */}
               <ResponsiveContainer width="100%" height={400}>
