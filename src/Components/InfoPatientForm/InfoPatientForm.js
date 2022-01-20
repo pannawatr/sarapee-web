@@ -494,96 +494,210 @@ function InfoPatientForm() {
                   <br></br>
                   <h4>Physical Examination</h4>
                   <Table style={{ border: "1px solid black" }}>
-                    <thead>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          1. GCS
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          10. Comunication
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          2. Sencation
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          11. Dysphagia
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          3. Musle Rone
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          12. Complication
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          4. ROM
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          13. ADL
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          5. Co-ordination
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          14. BI Score
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          6. Hard function
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          15. Adaptive Device
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          7. Sitting function
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          16. Home & Physical Environment
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          8. Endurance
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          17. Leisure
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          9. Perception
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          18. Prevocational
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          Plan of treatment:
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          Treatment:
-                        </th>
-                      </tr>
-                      <tr>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          Re - assessment:
-                        </th>
-                        <th style={{ border: "1px solid black", width: "50%" }}>
-                          Home - program:
-                        </th>
-                      </tr>
-                    </thead>
+                    {users.map((user) => {
+                      return (
+                        <thead>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              1. GCS
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              10. Comunication
+                            </th>
+                          </tr>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              2. Sencation
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              11. Dysphagia
+                            </th>
+                          </tr>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              3. Musle Rone
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              12. Complication
+                            </th>
+                          </tr>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              4. ROM
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              13. ADL
+                            </th>
+                          </tr>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              5. Co-ordination
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              14. BI Score: {user.biScore}
+                            </th>
+                          </tr>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              6. Hard function
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              15. Adaptive Device
+                            </th>
+                          </tr>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              7. Sitting function
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              16. Home & Physical Environment
+                            </th>
+                          </tr>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              8. Endurance
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              17. Leisure
+                            </th>
+                          </tr>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              9. Perception
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              18. Prevocational
+                            </th>
+                          </tr>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              Plan of treatment:
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              Treatment:
+                            </th>
+                          </tr>
+                          <tr>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              Re - assessment:
+                            </th>
+                            <th
+                              style={{
+                                border: "1px solid black",
+                                width: "50%",
+                              }}
+                            >
+                              Home - program:
+                            </th>
+                          </tr>
+                        </thead>
+                      );
+                    })}
                   </Table>
                   <br></br>
                   <div className="d-flex justify-content-end">

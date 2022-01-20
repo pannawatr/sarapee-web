@@ -496,51 +496,51 @@ function HomePage() {
   const dataBar = [
     {
       name: "ขัวมุง",
-      "คะแนน BI": BiScoreCal[0],
+      "คะแนน BI": BiScoreCal[0] / userCountSubD[0],
     },
     {
       name: "ชมภู",
-      "คะแนน BI": BiScoreCal[1],
+      "คะแนน BI": BiScoreCal[1] / userCountSubD[1],
     },
     {
       name: "ไชยสถาน",
-      "คะแนน BI": BiScoreCal[2],
+      "คะแนน BI": BiScoreCal[2] / userCountSubD[1],
     },
     {
       name: "ดอนแก้ว",
-      "คะแนน BI": BiScoreCal[3],
+      "คะแนน BI": BiScoreCal[3] / userCountSubD[3],
     },
     {
       name: "ท่ากว้าง",
-      "คะแนน BI": BiScoreCal[4],
+      "คะแนน BI": BiScoreCal[4] / userCountSubD[4],
     },
     {
       name: "ท่าวังตาล",
-      "คะแนน BI": BiScoreCal[5],
+      "คะแนน BI": BiScoreCal[5] / userCountSubD[5],
     },
     {
       name: "ป่าบง",
-      "คะแนน BI": BiScoreCal[6],
+      "คะแนน BI": BiScoreCal[6] / userCountSubD[6],
     },
     {
       name: "ย่างเนิ้ง",
-      "คะแนน BI": BiScoreCal[7],
+      "คะแนน BI": BiScoreCal[7] / userCountSubD[7],
     },
     {
       name: "สันทราย",
-      "คะแนน BI": BiScoreCal[8],
+      "คะแนน BI": BiScoreCal[8] / userCountSubD[8],
     },
     {
       name: "สารภี",
-      "คะแนน BI": BiScoreCal[9],
+      "คะแนน BI": BiScoreCal[9] / userCountSubD[9],
     },
     {
       name: "หนองผึ้ง",
-      "คะแนน BI": BiScoreCal[10],
+      "คะแนน BI": BiScoreCal[10] / userCountSubD[10],
     },
     {
       name: "หนองแฝก",
-      "คะแนน BI": BiScoreCal[11],
+      "คะแนน BI": BiScoreCal[11] / userCountSubD[11],
     },
   ];
 
@@ -557,162 +557,162 @@ function HomePage() {
   const dataRadar = [
     {
       subject: "Feeding",
-      A: BiType[0][0],
-      B: BiType[0][0],
-      C: BiType[0][0],
-      D: BiType[0][0],
-      E: BiType[0][0],
-      F: BiType[0][0],
-      G: BiType[0][0],
-      H: BiType[0][0],
-      I: BiType[0][0],
-      J: BiType[0][0],
-      K: BiType[0][0],
-      L: BiType[0][0],
+      A: BiType[0][0] / userCountSubD[0],
+      B: BiType[1][0] / userCountSubD[1],
+      C: BiType[2][0] / userCountSubD[2],
+      D: BiType[3][0] / userCountSubD[3],
+      E: BiType[4][0] / userCountSubD[4],
+      F: BiType[5][0] / userCountSubD[5],
+      G: BiType[6][0] / userCountSubD[6],
+      H: BiType[7][0] / userCountSubD[7],
+      I: BiType[8][0] / userCountSubD[8],
+      J: BiType[9][0] / userCountSubD[9],
+      K: BiType[10][0] / userCountSubD[10],
+      L: BiType[11][0] / userCountSubD[11],
       fullMark: 2,
     },
     {
       subject: "Grooming",
-      A: BiType[0][1],
-      B: BiType[1][1],
-      C: BiType[2][1],
-      D: BiType[3][1],
-      E: BiType[4][1],
-      F: BiType[5][1],
-      G: BiType[6][1],
-      H: BiType[7][1],
-      I: BiType[8][1],
-      J: BiType[9][1],
-      K: BiType[10][1],
-      L: BiType[11][1],
+      A: BiType[0][1] / userCountSubD[0],
+      B: BiType[1][1] / userCountSubD[1],
+      C: BiType[2][1] / userCountSubD[2],
+      D: BiType[3][1] / userCountSubD[3],
+      E: BiType[4][1] / userCountSubD[4],
+      F: BiType[5][1] / userCountSubD[5],
+      G: BiType[6][1] / userCountSubD[6],
+      H: BiType[7][1] / userCountSubD[7],
+      I: BiType[8][1] / userCountSubD[8],
+      J: BiType[9][1] / userCountSubD[9],
+      K: BiType[10][1] / userCountSubD[10],
+      L: BiType[11][1] / userCountSubD[11],
       fullMark: 1,
     },
     {
       subject: "Transfer",
-      A: BiType[0][2],
-      B: BiType[1][2],
-      C: BiType[2][2],
-      D: BiType[3][2],
-      E: BiType[4][2],
-      F: BiType[5][2],
-      G: BiType[6][2],
-      H: BiType[7][2],
-      I: BiType[8][2],
-      J: BiType[9][2],
-      K: BiType[10][2],
-      L: BiType[11][2],
+      A: BiType[0][2] / userCountSubD[0],
+      B: BiType[1][2] / userCountSubD[1],
+      C: BiType[2][2] / userCountSubD[2],
+      D: BiType[3][2] / userCountSubD[3],
+      E: BiType[4][2] / userCountSubD[4],
+      F: BiType[5][2] / userCountSubD[5],
+      G: BiType[6][2] / userCountSubD[6],
+      H: BiType[7][2] / userCountSubD[7],
+      I: BiType[8][2] / userCountSubD[8],
+      J: BiType[9][2] / userCountSubD[9],
+      K: BiType[10][2] / userCountSubD[10],
+      L: BiType[11][2] / userCountSubD[11],
       fullMark: 3,
     },
     {
       subject: "Toilet",
-      A: BiType[0][3],
-      B: BiType[1][3],
-      C: BiType[2][3],
-      D: BiType[3][3],
-      E: BiType[4][3],
-      F: BiType[5][3],
-      G: BiType[6][3],
-      H: BiType[7][3],
-      I: BiType[8][3],
-      J: BiType[9][3],
-      K: BiType[10][3],
-      L: BiType[11][3],
+      A: BiType[0][3] / userCountSubD[0],
+      B: BiType[1][3] / userCountSubD[1],
+      C: BiType[2][3] / userCountSubD[2],
+      D: BiType[3][3] / userCountSubD[3],
+      E: BiType[4][3] / userCountSubD[4],
+      F: BiType[5][3] / userCountSubD[5],
+      G: BiType[6][3] / userCountSubD[6],
+      H: BiType[7][3] / userCountSubD[7],
+      I: BiType[8][3] / userCountSubD[8],
+      J: BiType[9][3] / userCountSubD[9],
+      K: BiType[10][3] / userCountSubD[10],
+      L: BiType[11][3] / userCountSubD[11],
       fullMark: 2,
     },
     {
       subject: "Mobility",
-      A: BiType[0][4],
-      B: BiType[1][4],
-      C: BiType[2][4],
-      D: BiType[3][4],
-      E: BiType[4][4],
-      F: BiType[5][4],
-      G: BiType[6][4],
-      H: BiType[7][4],
-      I: BiType[8][4],
-      J: BiType[9][4],
-      K: BiType[10][4],
-      L: BiType[11][4],
+      A: BiType[0][4] / userCountSubD[0],
+      B: BiType[1][4] / userCountSubD[1],
+      C: BiType[2][4] / userCountSubD[2],
+      D: BiType[3][4] / userCountSubD[3],
+      E: BiType[4][4] / userCountSubD[4],
+      F: BiType[5][4] / userCountSubD[5],
+      G: BiType[6][4] / userCountSubD[6],
+      H: BiType[7][4] / userCountSubD[7],
+      I: BiType[8][4] / userCountSubD[8],
+      J: BiType[9][4] / userCountSubD[9],
+      K: BiType[10][4] / userCountSubD[10],
+      L: BiType[11][4] / userCountSubD[11],
       fullMark: 3,
     },
     {
       subject: "Dressing",
-      A: BiType[0][5],
-      B: BiType[1][5],
-      C: BiType[2][5],
-      D: BiType[3][5],
-      E: BiType[4][5],
-      F: BiType[5][5],
-      G: BiType[6][5],
-      H: BiType[7][5],
-      I: BiType[8][5],
-      J: BiType[9][5],
-      K: BiType[10][5],
-      L: BiType[11][5],
+      A: BiType[0][5] / userCountSubD[0],
+      B: BiType[1][5] / userCountSubD[1],
+      C: BiType[2][5] / userCountSubD[2],
+      D: BiType[3][5] / userCountSubD[3],
+      E: BiType[4][5] / userCountSubD[4],
+      F: BiType[5][5] / userCountSubD[5],
+      G: BiType[6][5] / userCountSubD[6],
+      H: BiType[7][5] / userCountSubD[7],
+      I: BiType[8][5] / userCountSubD[8],
+      J: BiType[9][5] / userCountSubD[9],
+      K: BiType[10][5] / userCountSubD[10],
+      L: BiType[11][5] / userCountSubD[11],
       fullMark: 3,
     },
     {
       subject: "Stairs",
-      A: BiType[0][6],
-      B: BiType[1][6],
-      C: BiType[2][6],
-      D: BiType[3][6],
-      E: BiType[4][6],
-      F: BiType[5][6],
-      G: BiType[6][6],
-      H: BiType[7][6],
-      I: BiType[8][6],
-      J: BiType[9][6],
-      K: BiType[10][6],
-      L: BiType[11][6],
+      A: BiType[0][6] / userCountSubD[0],
+      B: BiType[1][6] / userCountSubD[1],
+      C: BiType[2][6] / userCountSubD[2],
+      D: BiType[3][6] / userCountSubD[3],
+      E: BiType[4][6] / userCountSubD[4],
+      F: BiType[5][6] / userCountSubD[5],
+      G: BiType[6][6] / userCountSubD[6],
+      H: BiType[7][6] / userCountSubD[7],
+      I: BiType[8][6] / userCountSubD[8],
+      J: BiType[9][6] / userCountSubD[9],
+      K: BiType[10][6] / userCountSubD[10],
+      L: BiType[11][6] / userCountSubD[11],
       fullMark: 2,
     },
     {
       subject: "Bathing",
-      A: BiType[0][7],
-      B: BiType[1][7],
-      C: BiType[2][7],
-      D: BiType[3][7],
-      E: BiType[4][7],
-      F: BiType[5][7],
-      G: BiType[6][7],
-      H: BiType[7][7],
-      I: BiType[8][7],
-      J: BiType[9][7],
-      K: BiType[10][7],
-      L: BiType[11][7],
+      A: BiType[0][7] / userCountSubD[0],
+      B: BiType[1][7] / userCountSubD[1],
+      C: BiType[2][7] / userCountSubD[2],
+      D: BiType[3][7] / userCountSubD[3],
+      E: BiType[4][7] / userCountSubD[4],
+      F: BiType[5][7] / userCountSubD[5],
+      G: BiType[6][7] / userCountSubD[6],
+      H: BiType[7][7] / userCountSubD[7],
+      I: BiType[8][7] / userCountSubD[8],
+      J: BiType[9][7] / userCountSubD[9],
+      K: BiType[10][7] / userCountSubD[10],
+      L: BiType[11][7] / userCountSubD[11],
       fullMark: 1,
     },
     {
       subject: "Bowels",
-      A: BiType[0][8],
-      B: BiType[1][8],
-      C: BiType[2][8],
-      D: BiType[3][8],
-      E: BiType[4][8],
-      F: BiType[5][8],
-      G: BiType[6][8],
-      H: BiType[7][8],
-      I: BiType[8][8],
-      J: BiType[9][8],
-      K: BiType[10][8],
-      L: BiType[11][8],
+      A: BiType[0][8] / userCountSubD[0],
+      B: BiType[1][8] / userCountSubD[1],
+      C: BiType[2][8] / userCountSubD[2],
+      D: BiType[3][8] / userCountSubD[3],
+      E: BiType[4][8] / userCountSubD[4],
+      F: BiType[5][8] / userCountSubD[5],
+      G: BiType[6][8] / userCountSubD[6],
+      H: BiType[7][8] / userCountSubD[7],
+      I: BiType[8][8] / userCountSubD[8],
+      J: BiType[9][8] / userCountSubD[9],
+      K: BiType[10][8] / userCountSubD[10],
+      L: BiType[11][8] / userCountSubD[11],
       fullMark: 2,
     },
     {
       subject: "Bladder",
-      A: BiType[0][9],
-      B: BiType[1][9],
-      C: BiType[2][9],
-      D: BiType[3][9],
-      E: BiType[4][9],
-      F: BiType[5][9],
-      G: BiType[9][9],
-      H: BiType[7][9],
-      I: BiType[8][9],
-      J: BiType[9][9],
-      K: BiType[10][9],
-      L: BiType[11][9],
+      A: BiType[0][9] / userCountSubD[0],
+      B: BiType[1][9] / userCountSubD[1],
+      C: BiType[2][9] / userCountSubD[2],
+      D: BiType[3][9] / userCountSubD[3],
+      E: BiType[4][9] / userCountSubD[4],
+      F: BiType[5][9] / userCountSubD[5],
+      G: BiType[9][9] / userCountSubD[6],
+      H: BiType[7][9] / userCountSubD[7],
+      I: BiType[8][9] / userCountSubD[8],
+      J: BiType[9][9] / userCountSubD[9],
+      K: BiType[10][9] / userCountSubD[10],
+      L: BiType[11][9] / userCountSubD[11],
       fullMark: 2,
     },
   ];
@@ -751,84 +751,96 @@ function HomePage() {
                     dataKey="A"
                     stroke="#8884d8"
                     fill="#8884d8"
-                    fillOpacity={0.6}
+                    dot={{ fill: "#8884d8", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="ชมภู"
                     dataKey="B"
-                    stroke="#8884d8"
-                    fill="#8884d8"
-                    fillOpacity={0.6}
+                    stroke="#6253cb"
+                    fill="#6253cbs"
+                    dot={{ fill: "#6253cbs", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="ไชยสถาน"
                     dataKey="C"
                     stroke="#82ca9d"
                     fill="#82ca9d"
-                    fillOpacity={0.6}
+                    dot={{ fill: "#82ca9d", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="ดอนแก้ว"
                     dataKey="D"
                     stroke="#258a63"
                     fill="#258a63"
-                    fillOpacity={0.6}
+                    dot={{ fill: "#258a63", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="ท่ากว้าง"
                     dataKey="E"
-                    stroke="##b3dca0"
-                    fill="##b3dca0"
-                    fillOpacity={0.6}
+                    stroke="#b3dca0"
+                    fill="#b3dca0"
+                    dot={{ fill: "#b3dca0", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="ท่าวังตาล"
                     dataKey="F"
                     stroke="#9acd32"
                     fill="#9acd32"
-                    fillOpacity={0.6}
+                    dot={{ fill: "#9acd32", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="ป่าบง"
                     dataKey="G"
                     stroke="#9ad88e"
                     fill="#9ad88e"
-                    fillOpacity={0.6}
+                    dot={{ fill: "#9ad88e", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="ย่างเนิ้ง"
                     dataKey="H"
-                    stroke="##7692bf"
-                    fill="##7692bf"
-                    fillOpacity={0.6}
+                    stroke="#b3dca0"
+                    fill="#b3dca0"
+                    dot={{ fill: "#b3dca0", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="สันทราย"
                     dataKey="I"
-                    stroke="##7692bf"
-                    fill="##7692bf"
-                    fillOpacity={0.6}
+                    stroke="#7692bf"
+                    fill="#7692bf"
+                    dot={{ fill: "#7692bf", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="สารภี"
                     dataKey="J"
-                    stroke="#556699"
-                    fill="#556699"
-                    fillOpacity={0.6}
+                    stroke="#5ca098"
+                    fill="#5ca098"
+                    dot={{ fill: "#5ca098", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="หนองผึ้ง"
                     dataKey="K"
-                    stroke="#556699"
-                    fill="#556699"
-                    fillOpacity={0.6}
+                    stroke="#114422"
+                    fill="#114422"
+                    dot={{ fill: "#114422", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Radar
                     name="หนองแฝก"
                     dataKey="L"
                     stroke="#556699"
                     fill="#556699"
-                    fillOpacity={0.6}
+                    dot={{ fill: "#556699", r: 5 }}
+                    fillOpacity={0.3}
                   />
                   <Legend />
                 </RadarChart>
