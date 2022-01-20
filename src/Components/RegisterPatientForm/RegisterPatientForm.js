@@ -109,6 +109,16 @@ function RegisterPatienForm() {
 
     // BI
     biScore: "",
+    biFeeding: 0,
+    biGrooming: 0,
+    biTransfer: 0,
+    biToilet: 0,
+    biMobility: 0,
+    biDressing: 0,
+    biStairs: 0,
+    biBathing: 0,
+    biBowels: 0,
+    biBladder: 0,
 
     //กายภาพบำบัด
     imgTime: "",

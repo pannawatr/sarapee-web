@@ -26,6 +26,16 @@ function BIForm() {
 
     await updateDoc(updateRef, {
       biScore: biscoredb,
+      biFeeding: biscore1,
+      biGrooming: biscore2,
+      biTransfer: biscore3,
+      biToilet: biscore4,
+      biMobility: biscore5,
+      biDressing: biscore6,
+      biStairs: biscore7,
+      biBathing: biscore8,
+      biBowels: biscore9,
+      biBladder: biscore10,
     }).then(() => {
       alert("บันทึกข้อมูลแล้ว");
       navigate("/search");
@@ -178,7 +188,7 @@ function BIForm() {
                   </td>
                 </tr>
                 <tr>
-                  <td>4. ใช้ห้องน้ำ (Toulet use)</td>
+                  <td>4. ใช้ห้องน้ำ (Toilet use)</td>
                   <td>
                     <input
                       type="radio"
