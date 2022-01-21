@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Col,
@@ -22,9 +22,188 @@ function OccupationalThrapy() {
   let navigate = useNavigate();
 
   const updateRef = doc(db, "users", userId);
+  useEffect(() => {
+    onSnapshot(doc(db, "users", userId), (doc) => {
+      const item = [];
+      item.push(doc.data());
+      setUsers(item);
+    });
+  }, []);
+
+  const [occTimeDb, setOccTimeDb] = useState("");
+  const [occDayrecieveDb, setOccDayrecieveDb] = useState("");
+  const [occTimeServiceDb, setOccServiceDb] = useState("");
+  const [occIcdDb, setOccIcdDb] = useState("");
+  const [occImportantSymptomsDb, setOccImportantSymtomsDb] = useState("");
+  const [occPIDb, setOccPIDb] = useState("");
+  const [occPIDateDb, setOccPIDateDb] = useState("");
+  const [occPHDb, setOccPHDb] = useState("");
+  const [occPrecautionDb, setOccPrecautionDb] = useState("");
+
+  const [occGcsEDb, setOccGcsEDb] = useState("");
+  const [occGcsMDb, setOccGcsMDb] = useState("");
+  const [occGcsVDb, setOccGcsVDb] = useState("");
+
+  const [occSencationLigthDb, setOccSencationLightDb] = useState("");
+  const [occSencationPainDb, setOccSencationPainDb] = useState("");
+  const [occSencationPropDb, setOccSencationPropDb] = useState("");
+
+  const [occMuscleToneDb, setOccMuscleToneDb] = useState("");
+  const [occShoulderRDb, setOccShoulderRDb] = useState("");
+  const [occShoulderLDb, setOccShoulderLDb] = useState("");
+  const [occElbowRDb, setOccElbowRDb] = useState("");
+  const [occElbowLDb, setOccElbowLDb] = useState("");
+  const [occForearmRDb, setOccForearmRDb] = useState("");
+  const [occForearmLDb, setOccForearmLDb] = useState("");
+  const [occWristRDb, setOccWristRDb] = useState("");
+  const [occWristLDb, setOccWristLDb] = useState("");
+  const [occFingersRDb, setOccFingersRDb] = useState("");
+  const [occFingersLDb, setOccFingersLDb] = useState("");
+  const [occRecoveryStateDb, setOccRecoveryStateDb] = useState("");
+
+  const [occCoordinationDb, setOccCoordinationDb] = useState("");
+
+  const [occHandGraspDb, setOccHandGraspDb] = useState("");
+  const [occHandGraspAboutDb, setOccHandGraspAboutDb] = useState("");
+
+  const [occHandPrehensionDb, setOccHandPrehensionDb] = useState("");
+  const [occHandPrehensionAboutDb, setOccHandPrehensionAboutDb] = useState("");
+
+  const [occHandDexDb, setOccHandDexDb] = useState("");
+  const [occHandDexAboutDb, setOccHandDexAboutDb] = useState("");
+
+  const [occSittingStaticDb, setOccSittingStaticDb] = useState("");
+  const [occSittingDynamicDb, setOccSittingDynamicDb] = useState("");
+
+  const [occEndruanceDb, setOccEndruanceDb] = useState("");
+
+  const [occPerceptionDb, setOccPerceptionDb] = useState("");
+  const [occPerceptionAboutDb, setOccPerceptionAboutDb] = useState("");
+
+  const [occCommunicationDb, setOccCommunicationDb] = useState("");
+  const [occCommunicationAboutDb, setOccCommunicationAboutDb] = useState("");
+
+  const [occDysphagiaDb, setOccDysphagiaDb] = useState("");
+  const [occDysphagiaAboutDb, setOccDysphagiaAboutDb] = useState("");
+
+  const [occComplicationDb, setOccComplicationDb] = useState("");
+  const [occComplicationAboutDb, setOccComplicationAboutDb] = useState("");
+
+  const [occADLDb, setOccADLDb] = useState("");
+  const [occADLAboutDb, setOccADLAboutDb] = useState("");
+
+  const [occBiScoreDb, setOccBiScoreDb] = useState("");
+  const [occAdaptiveDb, setOccAdaptiveDb] = useState("");
+  const [occHomePhyDb, setOccHomePhyDb] = useState("");
+
+  const [occLeisureDb, setOccLeisureDb] = useState("");
+  const [occPrevocationalDb, setOccPrevocationalDb] = useState("");
+
+  const [occ2Q1Db, setOcc2Q1Db] = useState("");
+  const [occ2Q2Db, setOcc2Q2Db] = useState("");
+  const [occOTDiagDb, setOccOTDiagDb] = useState("");
+  const [occPatientGoalDb, setOccPatientGoalDb] = useState("");
+  const [occRehabDb, setOccRehabDb] = useState("");
+  const [occProblemDb, setOccProblemDb] = useState("");
+  const [occPlanofTreatDb, setOccPlanofTreatDb] = useState("");
+
+  const [occTreatmentICDDb, setOccTreatmentICFDb] = useState("");
+
+  const [occHomeProgramDb, setOccHomeProgramDb] = useState("");
+  const [occReassDb, setOccReassDb] = useState("");
+  const [occReassAboutDb, setOccReassAboutDb] = useState("");
+
+  const [occPhysicalNameDb, setOccPhysicalNameDb] = useState("");
+  const [occNumJobDb, setOccNumJobDb] = useState("");
+
   const updateUser = async () => {
     await updateDoc(updateRef, {
-      //กายภาพบำบัด
+      //กิจกรรม
+      occTime: "",
+      occDayrecieve: "",
+      occTimeService: "",
+      occIcd: "",
+      occImportantSymptoms: "",
+      occPI: "",
+      occPIDate: "",
+      occPH: "",
+      occPrecaution: "",
+
+      occGcsE: "",
+      occGcsM: "",
+      occGcsV: "",
+
+      occSencationLigth: "",
+      occSencationPain: "",
+      occSencationProp: "",
+
+      occMuscleTone: "",
+      occShoulderR: "",
+      occShoulderL: "",
+      occElbowR: "",
+      occElbowL: "",
+      occForearmR: "",
+      occForearmL: "",
+      occWristR: "",
+      occWristL: "",
+      occFingersR: "",
+      occFingersL: "",
+      occRecoveryState: "",
+
+      occCoordination: "",
+
+      occHandGrasp: "",
+      occHandGraspAbout: "",
+
+      occHandPrehension: "",
+      occHandPrehensionAbout: "",
+
+      occHandDex: "",
+      occHandDexAbout: "",
+
+      occSittingStatic: "",
+      occSittingDynamic: "",
+
+      occEndruance: "",
+
+      occPerception: "",
+      occPerceptionAbout: "",
+
+      occCommunication: "",
+      occCommunicationAbout: "",
+
+      occDysphagia: "",
+      occDysphagiaAbout: "",
+
+      occComplication: "",
+      occComplicationAbout: "",
+
+      occADL: "",
+      occADLAbout: "",
+
+      occBiScore: "",
+      occAdaptive: "",
+      occHomePhy: "",
+
+      occLeisure: "",
+      occPrevocational: "",
+
+      occ2Q1: "",
+      occ2Q2: "",
+      occOTDiag: "",
+      occPatientGoal: "",
+      occRehab: "",
+      occProblem: "",
+      occPlanofTreat: "",
+
+      occTreatmentICD: "",
+
+      occHomeProgram: "",
+      occReass: "",
+      occReassAbout: "",
+
+      occPhysicalName: "",
+      occNumJob: "",
     }).then(() => {
       alert("บันทึกข้อมูลแล้ว");
       navigate("/search");
@@ -93,11 +272,23 @@ function OccupationalThrapy() {
 
             <Col sm={6} md={6} lg={6} className="m-auto pt-3">
               <div className="d-flex justify-content-end">
-                <h4 className="pe-3">ชื่อ : </h4>
-                <h4 className="pe-3">อายุ : </h4>
+                {users.map((user) => {
+                  return (
+                    <h4 className="pe-3">
+                      ชื่อ : {user.fname} {user.lname}
+                    </h4>
+                  );
+                })}
+                {users.map((user) => {
+                  return <h4 className="pe-3">อายุ : {user.age}</h4>;
+                })}
               </div>
               <div className="d-flex justify-content-end">
-                <h4 className="pe-3">เลขบัตรประชาชน : </h4>
+                {users.map((user) => {
+                  return (
+                    <h4 className="pe-3">เลขบัตรประชาชน : {user.idCard}</h4>
+                  );
+                })}
               </div>
             </Col>
           </Row>
