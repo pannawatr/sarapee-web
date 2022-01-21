@@ -195,15 +195,15 @@ function RegisterPatienForm() {
     occPH: "",
     occPrecaution: "",
 
-    occGcsE: "",
-    occGcsM: "",
-    occGcsV: "",
+    occGcsE: "1",
+    occGcsM: "1",
+    occGcsV: "1",
 
-    occSencationLigth: "",
-    occSencationPain: "",
-    occSencationProp: "",
+    occSencationLigth: "Intact",
+    occSencationPain: "Intact",
+    occSencationProp: "Intact",
 
-    occMuscleTone: "",
+    occMuscleTone: "Flaccidity",
     occShoulderR: "",
     occShoulderL: "",
     occElbowR: "",
@@ -227,12 +227,13 @@ function RegisterPatienForm() {
     occHandDex: "",
     occHandDexAbout: "",
 
-    occSittingStatic: "",
-    occSittingDynamic: "",
+    occSittingStatic: "No balance",
+    occSittingDynamic: "No balance",
 
     occEndruance: "",
 
     occPerception: "",
+    occPerception2: "",
     occPerceptionAbout: "",
 
     occCommunication: "",
@@ -261,12 +262,18 @@ function RegisterPatienForm() {
     occRehab: "",
     occProblem: "",
     occPlanofTreat: "",
+    occPlanofTreatAbout: "",
 
     occTreatmentICD: "",
+    ccTreatmentICDAbout: "",
+    occTreatmentICD2: "",
+    occTreatmentICDAbout2: "",
 
     occHomeProgram: "",
+    occHomeProgramAbout: "",
     occReass: "",
     occReassAbout: "",
+    occReassAbout2: "",
 
     occPhysicalName: "",
     occNumJob: "",
