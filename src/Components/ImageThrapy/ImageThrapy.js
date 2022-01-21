@@ -1745,6 +1745,7 @@ function ImageThrapy() {
                 borderRadius: "15px",
                 padding: ".75rem",
               }}
+              onClick={updateUser}
             >
               บันทึกข้อมูล
             </Button>

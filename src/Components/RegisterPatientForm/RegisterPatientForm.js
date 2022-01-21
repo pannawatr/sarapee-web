@@ -183,6 +183,93 @@ function RegisterPatienForm() {
     imgReassessmentPoint: "",
     imgReassessmentPointAbout: "",
     imgPhysicalTherapyName: "",
+
+    //กิจกรรมบำบัด
+    occTime: "",
+    occDayrecieve: "",
+    occTimeService: "",
+    occIcd: "",
+    occImportantSymptoms: "",
+    occPI: "",
+    occPIDate: "",
+    occPH: "",
+    occPrecaution: "",
+
+    occGcsE: "",
+    occGcsM: "",
+    occGcsV: "",
+
+    occSencationLigth: "",
+    occSencationPain: "",
+    occSencationProp: "",
+
+    occMuscleTone: "",
+    occShoulderR: "",
+    occShoulderL: "",
+    occElbowR: "",
+    occElbowL: "",
+    occForearmR: "",
+    occForearmL: "",
+    occWristR: "",
+    occWristL: "",
+    occFingersR: "",
+    occFingersL: "",
+    occRecoveryState: "",
+
+    occCoordination: "",
+
+    occHandGrasp: "",
+    occHandGraspAbout: "",
+
+    occHandPrehension: "",
+    occHandPrehensionAbout: "",
+
+    occHandDex: "",
+    occHandDexAbout: "",
+
+    occSittingStatic: "",
+    occSittingDynamic: "",
+
+    occEndruance: "",
+
+    occPerception: "",
+    occPerceptionAbout: "",
+
+    occCommunication: "",
+    occCommunicationAbout: "",
+
+    occDysphagia: "",
+    occDysphagiaAbout: "",
+
+    occComplication: "",
+    occComplicationAbout: "",
+
+    occADL: "",
+    occADLAbout: "",
+
+    occBiScore: "",
+    occAdaptive: "",
+    occHomePhy: "",
+
+    occLeisure: "",
+    occPrevocational: "",
+
+    occ2Q1: "",
+    occ2Q2: "",
+    occOTDiag: "",
+    occPatientGoal: "",
+    occRehab: "",
+    occProblem: "",
+    occPlanofTreat: "",
+
+    occTreatmentICD: "",
+
+    occHomeProgram: "",
+    occReass: "",
+    occReassAbout: "",
+
+    occPhysicalName: "",
+    occNumJob: "",
   };
 
   const [formError, setFormError] = useState({});

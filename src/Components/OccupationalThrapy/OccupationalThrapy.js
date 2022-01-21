@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Col,
@@ -12,8 +12,24 @@ import {
 } from "react-bootstrap";
 
 import { Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { db } from "../../Config";
+import { onSnapshot, doc, updateDoc } from "firebase/firestore";
 
 function OccupationalThrapy() {
+  let { userId } = useParams();
+  const [users, setUsers] = useState([]);
+  let navigate = useNavigate();
+
+  const updateRef = doc(db, "users", userId);
+  const updateUser = async () => {
+    await updateDoc(updateRef, {
+      //กายภาพบำบัด
+    }).then(() => {
+      alert("บันทึกข้อมูลแล้ว");
+      navigate("/search");
+    });
+  };
   return (
     <div>
       <Container className="p-3">
@@ -54,7 +70,7 @@ function OccupationalThrapy() {
                   className="pe-3"
                 >
                   <Form.Control
-                    type="text"
+                    type="date"
                     placeholder=" "
                     style={{ borderRadius: "15px" }}
                   />
@@ -66,7 +82,7 @@ function OccupationalThrapy() {
                   className="pe-3"
                 >
                   <Form.Control
-                    type="text"
+                    type="time"
                     placeholder=" "
                     style={{ borderRadius: "15px" }}
                   />
@@ -418,9 +434,7 @@ function OccupationalThrapy() {
             <Row>
               <h4>6. Hand function</h4>
               <Col>
-                <p>
-                  Grasp & release
-                </p>
+                <p>Grasp & release</p>
               </Col>
               <Col sm={12} lg={6}>
                 <Form.Check

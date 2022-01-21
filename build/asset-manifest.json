@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sarapee-web/static/css/main.14e3b312.chunk.css",
-    "main.js": "/sarapee-web/static/js/main.6890540d.chunk.js",
-    "main.js.map": "/sarapee-web/static/js/main.6890540d.chunk.js.map",
+    "main.js": "/sarapee-web/static/js/main.4805324e.chunk.js",
+    "main.js.map": "/sarapee-web/static/js/main.4805324e.chunk.js.map",
     "runtime-main.js": "/sarapee-web/static/js/runtime-main.cdfe5df4.js",
     "runtime-main.js.map": "/sarapee-web/static/js/runtime-main.cdfe5df4.js.map",
     "static/css/2.0a9ec390.chunk.css": "/sarapee-web/static/css/2.0a9ec390.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.0a9ec390.chunk.css",
     "static/js/2.f7424fed.chunk.js",
     "static/css/main.14e3b312.chunk.css",
-    "static/js/main.6890540d.chunk.js"
+    "static/js/main.4805324e.chunk.js"
   ]
 }
